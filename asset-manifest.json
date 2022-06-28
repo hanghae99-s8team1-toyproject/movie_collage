@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie_collage/static/css/main.5201ef3a.css",
+    "main.js": "/movie_collage/static/js/main.50a0ff98.js",
+    "index.html": "/movie_collage/index.html",
+    "main.5201ef3a.css.map": "/movie_collage/static/css/main.5201ef3a.css.map",
+    "main.50a0ff98.js.map": "/movie_collage/static/js/main.50a0ff98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5201ef3a.css",
+    "static/js/main.50a0ff98.js"
+  ]
+}
