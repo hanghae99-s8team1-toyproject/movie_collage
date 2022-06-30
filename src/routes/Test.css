@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+
+:root {
+  --menu--color: rgba(0, 0, 0, 0.8);
+  --button--bgcolor: rgb(144, 80, 157);
+  --button--bordercolor: rgb(173, 132, 178);
+  --font--color: rgb(255, 255, 255);
+}
+
+.App {
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: center;
+  max-width: 1536px;
+  height: 864px;
+  /* background: rgb(64, 23, 58);
+  background: linear-gradient(
+    90deg,
+    rgba(64, 23, 58, 1) 0%,
+    rgba(92, 26, 94, 1) 33%,
+    rgba(144, 80, 157, 1) 67%,
+    rgba(173, 132, 178, 1) 100%
+  ); */
+  background: rgb(30, 3, 46);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 3, 46, 1) 1%,
+    rgba(42, 4, 82, 0.9251050762101716) 65%,
+    rgba(106, 6, 213, 0.9026961126247374) 100%
+  );
+  color: var(--font--color);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 86px;
+  width: 100%;
+  background-color: var(--menu--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+}
+.logo {
+  height: 48px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("");
+}
+.content--answer {
+}
+
+.content--question {
+  font-size: 24px;
+  display: flex;
+  height: 100%;
+  animation: slide 3s;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content--answer {
+  display: flex;
+  flex-direction: column;
+}
+.content--answer__btn {
+  all: unset;
+  padding: 15px 35px 15px 35px;
+  margin: 10px;
+  border-color: var(--button--bordercolor);
+  border-radius: 15px;
+  border-style: solid;
+  font-size: 12px;
+  background-color: var(--button--bgcolor);
+}
+.content--answer__btn:hover {
+  background-color: var(--button--bordercolor);
+  color: black;
+}
+.start {
+  transform: scale(0);
+}
+.end {
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+/*여기부터*/
+
+.container {
+  margin: 60px auto;
+  width: 400px;
+  text-align: center;
+}
+
+.container .progress {
+  margin: 0 auto;
+  width: 400px;
+}
+
+.progress {
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 16px;
+  border-radius: 4px;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+#five:checked ~ .progress &gt; .progress-bar {
+  width: 5%;
+  background-color: #f63a0f;
+}
+
+#twentyfive:checked ~ .progress &gt; .progress-bar {
+  width: 25%;
+  background-color: #f27011;
+}
+
+#fifty:checked ~ .progress &gt; .progress-bar {
+  width: 50%;
+  background-color: #f2b01e;
+}
+
+#seventyfive:checked ~ .progress &gt; .progress-bar {
+  width: 75%;
+  background-color: #f2d31b;
+}
+
+#onehundred:checked ~ .progress &gt; .progress-bar {
+  width: 100%;
+  background-color: #86e01e;
+}
+
+.radio {
+  display: none;
+}
+
+.label {
+  display: inline-block;
+  margin: 0 5px 20px;
+  padding: 3px 8px;
+  color: #aaa;
+  text-shadow: 0 1px black;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.radio:checked + .label {
+  color: white;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 360px) {
+}
