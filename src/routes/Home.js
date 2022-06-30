@@ -31,7 +31,6 @@ function Home(){
 
   return(
     <div className="container">
-      <p></p>
     {loading ? <div className="Loading">Loading...</div> : 
       <>
         <div className="container">
