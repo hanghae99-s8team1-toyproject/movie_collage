@@ -6,6 +6,7 @@ import Result from "./routes/Result";
 
 function App() {
   return (
+    
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />}></Route>
