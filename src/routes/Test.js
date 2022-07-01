@@ -7,10 +7,11 @@ function Test() {
   const navigate = useNavigate();
   const [질문, 질문변경] = useState(Question);
   const [번호, 번호변경] = useState(0);
+  const [진행바, 진행바변경] = useState(100*(번호+1)/질문.length)
   const onClick = (event) => {
     번호변경(번호 + 1);
+    진행바변경(100*(번호+1)/질문.length)
     if (번호 === 질문.length - 1) {
-      console.log("페이지 이동");
       navigate("/result");
       // window.location.reload();
     }
@@ -22,6 +23,14 @@ function Test() {
     }, 50);
   }, [번호]);
 
+  const 앞으로 =()=>{
+    번호변경(번호-1)
+  }
+
+  const 뒤로 =()=>{
+    번호변경(번호+1)
+  }
+
   return (
     <div className="App">
       <header className="header">모두의 영화</header>
@@ -29,55 +38,14 @@ function Test() {
         <div className="content--question">
           <p className="content--question__box">{질문[번호].q}</p>
           <div className="프로그래스바">
-            <span>1 | 5</span>
+          <span className="프로그래스바--꺽쇠" onClick={뒤로}>&lt; </span> 
+          <span>1 | 5</span>
+           <span className="프로그래스바--꺽쇠" onClick={앞으로}>&gt;</span>
             <div className="프로그래스바--container">
-              <input
-                type="radio"
-                className="radio"
-                name="progress"
-                value="five"
-                id="five"
-              />
-
-              <input
-                type="radio"
-                className="radio"
-                name="progress"
-                value="twentyfive"
-                id="twentyfive"
-                checked
-              />
-
-              <input
-                type="radio"
-                className="radio"
-                name="progress"
-                value="fifty"
-                id="fifty"
-              />
-
-              <input
-                type="radio"
-                className="radio"
-                name="progress"
-                value="seventyfive"
-                id="seventyfive"
-              />
-
-              <input
-                type="radio"
-                className="radio"
-                name="progress"
-                value="onehundred"
-                id="onehundred"
-              />
-
-              <div className="progress">
-                <div className="progress-bar"></div>
+            <progress value={진행바} max="100"></progress>
               </div>
-            </div>
-            <span>\t </span>
-            <span> \t ..............</span>
+          
+           
           </div>
         </div>
         <div className="content--answer">
