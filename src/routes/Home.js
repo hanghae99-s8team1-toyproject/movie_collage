@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Detail from "./Detail";
+import { useNavigate } from "react-router-dom";
 import './Home.css'; 
 
 const stillCuts = [
@@ -12,18 +12,15 @@ const stillCuts = [
 ];
 const delay = 5000;
 
+
 function Home(){
   const [loadingState, setLoadingState] = useState(true);
   const [cutIdx, setCutIdx] = useState(0);
-  const [popupState, setPopupState] = useState(false);
-  
-  function openToPopup(){
-    setPopupState(true);
-  }
 
-  function closeToPopup(){
-    setPopupState(false);
-  }
+  const navigate = useNavigate();
+  const onClick = () => {
+    navigate("/test");
+  };
 
   useEffect (() => {
     setLoadingState(false)
@@ -39,7 +36,6 @@ function Home(){
 
   return(
     <>
-    {popupState ? <Detail close={closeToPopup}></Detail> : null}
     {loadingState ? <div className="Loading">Loading...</div> : 
       <div className="container">
         <div className="container--menu">
@@ -54,16 +50,34 @@ function Home(){
               ))}
             </div>
           </div>
-          
+            
           <div className="container--body--context">
             <h1 className="context__header">어떤 영화를 볼지 고민되시나요?</h1>
             <p className="context__paragraph">다음 테스트를 진행해보세요!<br />당신의 마음에 맞는 현재 개봉중인 영화를 골라드립니다!</p>
-            <button className="context__btn" onClick={openToPopup}>시작하기</button>
+            <button onClick={onClick} className="context__btn">시작하기</button>
           </div>
+
         </div>
       </div>}
     </>
     );
 }
+
+
+// 추후에 옮길 코드
+
+// {popupState ? <Detail close={closeToPopup}></Detail> : null}
+// import Detail from "./Detail";
+
+// const [popupState, setPopupState] = useState(false);
+
+// function openToPopup(){
+//   setPopupState(true);
+// }
+
+  // function closeToPopup(){
+//   setPopupState(false);
+// }
+
 
 export default Home;

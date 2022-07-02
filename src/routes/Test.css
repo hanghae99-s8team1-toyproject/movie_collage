@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+
+:root {
+  --menu--color: rgba(0, 0, 0, 0.8);
+  --button--bgcolor: rgb(144, 80, 157);
+  --button--bordercolor: rgb(173, 132, 178);
+  --font--color: rgb(255, 255, 255);
+}
+
+.App {
+  font-family: "Nanum Gothic", sans-serif;
+  text-align: center;
+  max-width: 1536px;
+  height: 864px;
+  background: rgb(30, 3, 46);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 3, 46, 1) 1%,
+    rgba(42, 4, 82, 0.9251050762101716) 65%,
+    rgba(106, 6, 213, 0.9026961126247374) 100%
+  );
+  color: var(--font--color);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 86px;
+  width: 100%;
+  background-color: var(--menu--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+}
+.logo {
+  height: 48px;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60px;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+  background-image: url("");
+}
+
+
+.content--question {
+  font-size: 24px;
+  display: flex;
+  height: 100%;
+  animation: slide 3s;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content--answer {
+  display: flex;
+  flex-direction: column;
+}
+.content--answer__btn {
+  all: unset;
+  padding: 15px 35px 15px 35px;
+  margin: 10px;
+  border-color: var(--button--bordercolor);
+  border-radius: 15px;
+  border-style: solid;
+  font-size: 12px;
+  background-color: var(--button--bgcolor);
+}
+.content--answer__btn:hover {
+  background-color: var(--button--bordercolor);
+  color: black;
+}
+/* .start {
+  transform: scale(0);
+}
+.end {
+  transform: scale(1);
+  transition: all 0.5s;
+} */
+
+/*여기부터*/
+
+.프로그래스바--꺽쇠{
+  font-weight: 600;
+  padding: 0px 10px 0px 10px;
+}
+
+
+
+@media (max-width: 360px) {
+}
