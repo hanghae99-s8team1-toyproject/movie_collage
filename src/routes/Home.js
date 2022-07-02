@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Detail from "./Detail";
 import './Home.css'; 
 
 const stillCuts = [
@@ -12,14 +13,21 @@ const stillCuts = [
 const delay = 5000;
 
 function Home(){
-  const [loading, setLoading] = useState(true);
+  const [loadingState, setLoadingState] = useState(true);
   const [cutIdx, setCutIdx] = useState(0);
+  const [popupState, setPopupState] = useState(false);
   
+  function openToPopup(){
+    setPopupState(true);
+  }
 
+  function closeToPopup(){
+    setPopupState(false);
+  }
 
   useEffect (() => {
-    setLoading(false)
-  }, []);
+    setLoadingState(false)
+  }, [loadingState]);
 
   useEffect ( ()=> {
     setTimeout(() =>
@@ -30,31 +38,31 @@ function Home(){
   }, [cutIdx]);
 
   return(
-    <div className="container">
-    {loading ? <div className="Loading">Loading...</div> : 
-      <>
-        <div className="container">
-          <div className="container--menu">모두의 영화</div>
-          <div className="container--body">
-
-            <div className="container--body--Slideshow">
-              <div className="Slideshow__Slideshowshadow"></div>
-              <div className="Slideshow__Slider" style={{ transform : `translateX(${- cutIdx * 100}%)` }}>
-                {stillCuts.map(( backgroundImage, Idx ) => (
-                  <div className="Slideshow__Slide" key={Idx} style={{ backgroundImage }}></div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="container--body--context">
-              <h1 className="context__header">어떤 영화를 볼지 고민되시나요?</h1>
-              <p className="context__paragraph">다음 테스트를 진행해보세요!<br />당신의 마음에 맞는 현재 개봉중인 영화를 골라드립니다!</p>
-              <button className="context__btn">시작하기</button>
+    <>
+    {popupState ? <Detail close={closeToPopup}></Detail> : null}
+    {loadingState ? <div className="Loading">Loading...</div> : 
+      <div className="container">
+        <div className="container--menu">
+          모두의 영화
+        </div>
+        <div className="container--body">
+          <div className="container--body--Slideshow">
+            <div className="Slideshow__Slideshowshadow"></div>
+            <div className="Slideshow__Slider" style={{ transform : `translateX(${- cutIdx * 100}%)` }}>
+              {stillCuts.map(( backgroundImage, Idx ) => (
+                <div className="Slideshow__Slide" key={Idx} style={{ backgroundImage }}></div>
+              ))}
             </div>
           </div>
+          
+          <div className="container--body--context">
+            <h1 className="context__header">어떤 영화를 볼지 고민되시나요?</h1>
+            <p className="context__paragraph">다음 테스트를 진행해보세요!<br />당신의 마음에 맞는 현재 개봉중인 영화를 골라드립니다!</p>
+            <button className="context__btn" onClick={openToPopup}>시작하기</button>
+          </div>
         </div>
-      </>}
-    </div>
+      </div>}
+    </>
     );
 }
 
