@@ -12,10 +12,6 @@ function Detail(props){
     });
   }, []);
 
-  const message1 = movieData.description_intro;
-  const message2 = movieData.description_full;
-
-  console.log(movieData);
   return (
     <div className='container--detail'>
       <div className='detail--background'>
@@ -34,8 +30,8 @@ function Detail(props){
             <div><span>감독</span> {movieData.genres}</div>
             <div><span>출연</span> {movieData.genres}</div>
             <div><span>키워드</span> {movieData.genres}</div>
-            <Desc title="시놉시스" context={message1 ? message1.substr(0, 100) : ""} />
-            <Desc title="줄거리" context={message2 ? message2.substr(0, 300) : ""} />
+            <Desc title="시놉시스" context={movieData.description_intro ? (movieData.description_intro).substr(0, 100) : ""} />
+            <Desc title="줄거리" context={movieData.description_full ? (movieData.description_full).substr(0, 300) : ""} />
           </div>
           <button onClick={props.close}>창 닫기</button>
         </div>

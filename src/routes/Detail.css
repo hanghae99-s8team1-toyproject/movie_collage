@@ -28,7 +28,7 @@
   background-color: white;
 
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  grid-template-columns: 1fr 1.8fr;
 
   border-radius: 1rem;
   padding: 1rem;
@@ -93,15 +93,20 @@
   font-weight: bold;
 }
 
+.detail--background__R dl {
+  margin: 0;
+}
+
 .detail--background__R dt {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 1rem 0;
 }
 
-.detail--background__R dl {
-  margin: 0;
+.detail--background__R dd {
+  margin-right:0.5rem;
 }
+
 
 .detail--background__R button {
   background-color: rgb(144,80,157);
@@ -114,6 +119,7 @@
 
   padding: 0.3rem 1rem;
   margin: auto;
+  margin-top: 1.3rem;
   margin-right: 1rem;
 
   transition: ease 0.2s;
