@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
-import './Home.css'; 
+import './Home.css';
+import Detail from "./Detail";
+
 
 const stillCuts = [
   `url(https://movie-phinf.pstatic.net/20220426_89/1650936584302EbdIF_JPEG/movie_image.jpg?type=m665_443_2)`,
@@ -56,7 +58,6 @@ function Home(){
             <p className="context__paragraph">다음 테스트를 진행해보세요!<br />당신의 마음에 맞는 현재 개봉중인 영화를 골라드립니다!</p>
             <button onClick={onClick} className="context__btn">시작하기</button>
           </div>
-
         </div>
       </div>}
     </>
