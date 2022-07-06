@@ -17,7 +17,7 @@ function Result() {
 
   return (
     <>
-      {popupState ? <Detail close={closeToPopup}></Detail> : "로딩중..."}
+      {popupState ? <Detail close={closeToPopup}></Detail> : null}
       <div className="resultpage">
         <header className="result--header">모두의 영화</header>
         <section className="result--movie">
