@@ -2,42 +2,40 @@ import React, { useState, useEffect } from 'react';
 import './Detail.css';
 
 function Detail(props){
-// src={"asdgasg"}
+  const [movieData, setMovieData] = useState({});
+
+  useEffect(() => {
+    fetch('https://yts.mx/api/v2/movie_details.json?movie_id=4200')
+    .then(response => response.json())
+    .then(res => {
+      setMovieData(res.data.movie);
+    });
+  }, []);
+
+  const message1 = movieData.description_intro;
+  const message2 = movieData.description_full;
+
+  console.log(movieData);
   return (
     <div className='container--detail'>
       <div className='detail--background'>
         <div className='detail--background__L'>
-          <img className='detail--background__L__poster' alt="movie poster image" />
+          <img src={movieData.medium_cover_image} alt="movie poster" />
         </div>
         <div className='detail--background__R'>
-          <h1 className='detail--background__R__title'></h1>
-          <h2 className='detail--background__R__entitle'></h2>
-          <ul className="detail--background__R__explain">
-            <li className="R__explain__year"></li>
-            <li className="R__explain__watchrate"></li>
-            <li className="R__explain__time"></li>
+          <h1>{movieData.title}</h1>
+          <h2>{movieData.title_english}</h2>
+          <ul>
+            <li>{movieData.year}년</li>
+            <li>평점: {movieData.rating}점</li>
+            <li>{movieData.runtime}분</li>
           </ul>
-          <div className='detail--background__R__detail'>
-            <dl>
-              <dt>감독</dt>
-              <dd>{}</dd>
-            </dl>
-            <dl>
-              <dt>출연</dt>
-              <dd>{}</dd>
-            </dl>
-            <dl>
-              <dt>키워드</dt>
-              <dd>{}</dd>
-            </dl>
-            <dl>
-              <dt>시놉시스</dt>
-              <dd>{}</dd>
-            </dl>
-            <dl>
-              <dt>줄거리</dt>
-              <dd></dd>
-            </dl>
+          <div>
+            <div><span>감독</span> {movieData.genres}</div>
+            <div><span>출연</span> {movieData.genres}</div>
+            <div><span>키워드</span> {movieData.genres}</div>
+            <Desc title="시놉시스" context={message1 ? message1.substr(0, 100) : ""} />
+            <Desc title="줄거리" context={message2 ? message2.substr(0, 300) : ""} />
           </div>
           <button onClick={props.close}>창 닫기</button>
         </div>
