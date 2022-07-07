@@ -30,6 +30,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1.8fr;
+  gap:1rem;
 
   border-radius: 1rem;
   padding: 1rem;
@@ -50,6 +51,13 @@
 
   margin: 1rem auto auto 1rem;
   border: none;
+
+}
+
+.detail--background__L img {
+  max-width: 21rem;
+
+  border-radius: 3px;
 }
 
 
@@ -66,31 +74,38 @@
   
   border: none;
   margin: 1rem auto auto 1rem;
+
+  height:32rem;
+  width: 37rem;
 }
 
-.detail--background__R > h1, h2, li, span, div, dt, dd {
+
+.detail--background__R > h1 {
+  font-size: 2.5rem;
   text-align: left;
   color: rgb(0,0,0);
 
   margin:0.5rem 0;
 }
 
-.detail--background__R > h1 {
-  font-size: 2.5rem;
-}
-
 .detail--background__R > h2 {
   font-size: 1.5rem;
+  text-align: left;
+  color: rgb(0,0,0);
+
+  margin:0.5rem 0;
 }
 
 .detail--background__R ul {
   padding: 0;
-  margin: 0.5rem 0;
+  margin:0.5rem 0;
   list-style: none;
 }
 
 .detail--background__R li {
   font-weight: bold;
+  text-align: left;
+  color: rgb(0,0,0);
 
   padding-right: 1rem;
   margin:0;
@@ -100,6 +115,17 @@
 
 .detail--background__R span {
   font-weight: bold;
+  text-align: left;
+  color: rgb(0,0,0);
+
+  margin:0.5rem 0;
+}
+
+.detail--background__R > div > div {
+  text-align: left;
+  color: rgb(0,0,0);
+
+  margin:0.5rem 0;
 }
 
 .detail--background__R dl {
@@ -109,10 +135,17 @@
 .detail--background__R dt {
   font-size: 1.2rem;
   font-weight: bold;
+  text-align: left;
+  color: rgb(0,0,0);
+
   margin: 1rem 0;
 }
 
 .detail--background__R dd {
+  text-align: left;
+  color: rgb(0,0,0);
+
+  margin:0.5rem 0;
   margin-right:0.5rem;
 }
 
@@ -127,10 +160,9 @@
   border-radius: 3px;
 
   padding: 0.3rem 1rem;
-  margin: auto;
-  margin-top: 1.3rem;
-  margin-right: 1rem;
-
+  
+  margin-top:auto;
+  margin-left:auto;
   transition: ease 0.2s;
   cursor:pointer;
 }
