@@ -11,10 +11,8 @@
 * {
   font-family: "Nanum Gothic", sans-serif;
   font-size: 12px;
-  color:var(--font--color);
+  color: var(--font--color);
 }
-
-.container
 
 .container--menu {
   background-color: rgba(0,0,0,0.3);
@@ -24,6 +22,7 @@
   justify-content: center;
   align-items: center;
 
+  color: var(--font--color);
   font-size: 2rem;
 
   border-radius: 1rem;
@@ -68,12 +67,16 @@
 
   width:100vw;
   height:100vh;
+
+  margin:0;
   z-index: 1;
 }
 
 .Slideshow__Slider {
   white-space: nowrap;
   transition: ease 1000ms;
+
+  margin:0;
 }
 
 .Slideshow__Slide {
@@ -83,6 +86,8 @@
 
   display: inline-block;
 
+  margin:0;
+    
   width:100vw;
   height:100vh;
 }

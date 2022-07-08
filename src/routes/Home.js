@@ -5,12 +5,12 @@ import Detail from "./Detail";
 
 
 const stillCuts = [
-  `url(https://movie-phinf.pstatic.net/20220426_89/1650936584302EbdIF_JPEG/movie_image.jpg?type=m665_443_2)`,
-  `url(https://movie-phinf.pstatic.net/20220523_267/1653271016283Xxk7P_JPEG/movie_image.jpg?type=m665_443_2)`,
-  `url(https://movie-phinf.pstatic.net/20191219_253/1576735700330webEM_JPEG/movie_image.jpg?type=m665_443_2)`,
-  `url(https://movie-phinf.pstatic.net/20220609_119/1654742162936nM9es_JPEG/movie_image.jpg?type=m665_443_2)`,
-  `url(https://movie-phinf.pstatic.net/20220509_90/1652071818706vYhLe_JPEG/movie_image.jpg?type=m665_443_2)`,
-  `url(https://movie-phinf.pstatic.net/20220608_130/16546506802104gMNH_JPEG/movie_image.jpg?type=m665_443_2)`
+  `url(https://indieground.kr/movieImgFolder/2fb06bbc-a20e-49e6-8f6f-e99077eba6a1_png)`,
+  `url(https://indieground.kr/movieImgFolder/453f3c0d-6fc6-4036-bfcf-1ef83dc62de6_jpg)`,
+  `url(https://indieground.kr/movieImgFolder/00727fff-ec03-458b-b56f-f54434bbdfa8_jpg)`,
+  `url(https://indieground.kr/movieImgFolder/2ed8d182-249f-4db1-9cc4-50fd4c7c70be_jpg)`,
+  `url(https://indieground.kr/movieImgFolder/fc159cb3-a50c-4b51-8e1d-0cd0bb523ff0_jpg)`,
+  `url(https://indieground.kr/movieImgFolder/ee205555-eeaf-4edd-9ec1-b2edc2b75744_jpg)`
 ];
 const delay = 5000;
 
@@ -54,8 +54,8 @@ function Home(){
           </div>
             
           <div className="container--body--context">
-            <h1 className="context__header">어떤 영화를 볼지 고민되시나요?</h1>
-            <p className="context__paragraph">다음 테스트를 진행해보세요!<br />당신의 마음에 맞는 현재 개봉중인 영화를 골라드립니다!</p>
+            <h1 className="context__header">독립 영화! 무엇을 볼지 고민되신다고요?</h1>
+            <p className="context__paragraph">다음 테스트를 진행해보세요!<br />당신이 볼만한 독립 영화를 추천해드립니다!</p>
             <button onClick={onClick} className="context__btn">시작하기</button>
           </div>
         </div>
