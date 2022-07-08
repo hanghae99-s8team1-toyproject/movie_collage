@@ -4,6 +4,7 @@ import './Detail.css';
 function Detail(props){
   const [loadingState, setLoadingState] = useState(true);
   const [movieData, setMovieData] = useState({});
+
  // fetch('http://54.81.236.188/Result')
   //   .then(response => response.json())
   //   .then(res => console.log(res));
