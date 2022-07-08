@@ -27,8 +27,9 @@
 .result--movie--text {
   text-align: left;
   background-color: rgb(38, 36, 41);
+  color: var(--font--color);
   padding: 30px 200px 30px 30px;
-  position: relative;
+  position: absolute;
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
@@ -49,17 +50,21 @@
 }
 
 .result--movie--img {
-  position: absolute;
-  right: 90px;
-  top: 290px;
+  position: relative;
+  right: -485px;
+  top: -57px;
   display: flex;
   flex-direction: column;
 }
 
+.result--movie--img--poster {
+  width: 40%;
+}
 .result--movie--img > button {
   margin-top: 10px;
   background-color: var(--button--bgcolor);
   border-style: none;
+  width: 40%;
 }
 
 .result--movie--img > img {
@@ -73,4 +78,11 @@
 
 .result--movie--info {
   margin-top: 10px;
+}
+
+.result--movie--text--keyword {
+  background-color: var(--font--color);
+  opacity: 0.3;
+  border-radius: 30px;
+  padding: 5px;
 }
