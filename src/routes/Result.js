@@ -19,7 +19,9 @@ function Result() {
 
   return (
     <>
-      {popupState ? <Detail close={closeToPopup}></Detail> : null}
+      {popupState ? (
+        <Detail close={closeToPopup} seq={data.movieUrl_seq}></Detail>
+      ) : null}
       <div className="resultpage">
         <header className="result--header">모두의 영화</header>
         <section className="result--movie">
@@ -37,11 +39,7 @@ function Result() {
           </div>
           <div className="result--movie--img">
             <img src={data.thumbnail} className="result--movie--img--poster" />
-            <button
-              onClick={openToPopup}
-              close="closeToPopup"
-              seq={data.movieUrl_seq}
-            >
+            <button onClick={openToPopup} close="closeToPopup">
               상세보기
             </button>
           </div>
