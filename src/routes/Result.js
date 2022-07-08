@@ -37,7 +37,7 @@ function Result() {
           </div>
           <div className="result--movie--img">
             <img src={data.thumbnail} className="result--movie--img--poster" />
-            <button onClick={openToPopup} close="closeToPopup">
+            <button onClick={openToPopup} close="closeToPopup"> seq={data.movieUrl_seq}
               상세보기
             </button>
           </div>
