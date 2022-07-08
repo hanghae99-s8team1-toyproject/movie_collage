@@ -5,10 +5,6 @@ function Detail(props){
   const [loadingState, setLoadingState] = useState(true);
   const [movieData, setMovieData] = useState({});
 
- // fetch('http://54.81.236.188/Result')
-  //   .then(response => response.json())
-  //   .then(res => console.log(res));
-
   useEffect(() => {
     fetch('http://54.81.236.188/Result')
       .then(response => response.json())
@@ -22,7 +18,7 @@ function Detail(props){
 
   if (JSON.stringify(movieData) !== '{}') {
     movieData.forEach(pram => {
-      if (pram.movieUrl_seq === 2252) {
+      if (pram.movieUrl_seq === props.seq) {
         movieInfo = pram;
         return movieInfo
       }
