@@ -82,7 +82,8 @@
 
 .result--movie--text--keyword {
   background-color: var(--font--color);
-  opacity: 0.3;
+  opacity: 0.2;
   border-radius: 30px;
   padding: 5px;
+  color: black;
 }
