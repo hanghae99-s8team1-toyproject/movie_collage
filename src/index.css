@@ -1,5 +1,5 @@
 :root {
-  --background--gradient: linear-gradient(90deg, rgba(64,23,58,1) 0%, rgba(92,26,94,1) 33%, rgba(144,80,157,1) 67%, rgba(173,132,178,1) 100%);
+  --background--gradient: linear-gradient(90deg, rgba(30, 3, 46, 1) 1%, rgba(42, 4, 82, 0.9251050762101716) 65%, rgba(106, 6, 213, 0.9026961126247374) 100%);
   --button--bgcolor: rgb(144,80,157);
   --button--bordercolor: rgb(173,132,178);
   --menu--color: rgba(0,0,0,0.2);

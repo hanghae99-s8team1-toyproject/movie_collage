@@ -39,17 +39,17 @@ function Detail(props){
           </div>
           <div className='detail--background__R'>
             <h1>{movieInfo.title}</h1>
-            <h2>{movieInfo.title_english}</h2>
+            <h2>{movieInfo.title_en}</h2>
             <ul>
-              <li>{movieInfo.year}년</li>
+              <li>{movieInfo.releaseDate}년</li>
               <li>{movieInfo.runningTime}</li>
             </ul>
             <div>
               <div><span>감독</span> {movieInfo.director}</div>
               <div><span>출연</span> {movieInfo.actor}</div>
               <div><span>키워드</span> {movieInfo.keyword}</div>
-              <Desc title="시놉시스" context={movieData.description_intro ? (movieData.description_intro).substr(0, 100) : ""} />
-              <Desc title="줄거리" context={movieData.description_full ? (movieData.description_full).substr(0, 300) : ""} />
+              <Desc title="시놉시스" context={movieInfo.synopsis ? (movieInfo.synopsis).substr(0, 100) : ""} />
+              <Desc title="줄거리" context={movieInfo.direct_intent ? (movieInfo.direct_intent).substr(0, 300) : ""} />
             </div>
             <button onClick={props.close}>창 닫기</button>
           </div>
