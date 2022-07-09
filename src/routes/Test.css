@@ -35,26 +35,36 @@
   flex-direction: row;
   margin-top: 60px;
   height: 60%;
-  align-items: center;
-  justify-content: center;
   /* background-image: url(""); */
 }
 
 
 .content--question {
+  width: 50rem;
   font-size: 24px;
   display: flex;
-  height: 100%;
+  height: 45rem;
   animation: slide 3s;
   flex-direction: column;
   justify-content: space-between;
   margin:auto;
 }
+
+.content--question__box {
+  font-size: 24px;
+}
+
 .content--answer {
+  width: 20rem;
   display: flex;
   flex-direction: column;
   margin: auto;
 }
+
+.content--answer button {
+  font-size: 15px;
+}
+
 .content--answer__btn {
   all: unset;
   padding: 15px 35px 15px 35px;
@@ -72,6 +82,7 @@
 
 
 /*여기부터*/
+
 .프로그래스바> span{
   font-size:12px
 }
@@ -93,6 +104,7 @@
 
 /* 로딩이미지 */
 .sk-fading-circle {
+  color: aliceblue;
   margin: 100px auto;
   width: 40px;
   height: 40px;

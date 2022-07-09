@@ -22,7 +22,9 @@ function Test() {
       // console.log(movies);
     }
   }, [movies]);
-
+  const goHome = ()=>{
+    navigate("/")
+  };
   const navigate = useNavigate();
   const [필터] = useState(Filter);
   const [질문] = useState(Question);
@@ -57,7 +59,7 @@ function Test() {
   return (
     <div className="App">
       <header className="header">
-        <img className="header--img" src="logo_movies.png" alt="logo" /></header>
+        <img className="header--img" src="logo_movies.png" onClick={goHome} alt="logo" /></header>
       {스위치 ? (
         <Loading />
       ) : (

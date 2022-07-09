@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Detail from "./Detail";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate} from "react-router-dom";
 import "./Result.css";
 
 function Result() {
@@ -16,6 +16,10 @@ function Result() {
 
   const location = useLocation();
   const data = location.state.testResult;
+  const navigate = useNavigate();
+  const goHome = ()=>{
+    navigate("/")
+  };
 
   return (
     <>
@@ -23,7 +27,8 @@ function Result() {
         <Detail close={closeToPopup} seq={data.movieUrl_seq}></Detail>
       ) : null}
       <div className="resultpage">
-        <header className="result--header">모두의 영화</header>
+        <header className="result--header"> 
+        <img className="header--img" src="logo_movies.png" onClick={goHome} alt="logo" /></header>
         <section className="result--movie">
           <div className="result--movie--text">
             <h1>오늘 당신만을 위한 영화는... </h1>
