@@ -1,14 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
-
-:root {
-  --menu--color: rgba(0, 0, 0, 0.8);
-  --button--bgcolor: rgb(144, 80, 157);
-  --button--bordercolor: rgb(173, 132, 178);
-  --font--color: rgb(255, 255, 255);
-}
 
 .App {
-  font-family: "Nanum Gothic", sans-serif;
+  font-size: 24px;
+  font-family:var(--font--family1) ;
   text-align: center;
   max-width: 1536px;
   height: 864px;
@@ -31,10 +24,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.3;
+
 }
-.logo {
+.header--img {
   height: 48px;
+
 }
 .content {
   display: flex;
@@ -54,10 +48,12 @@
   animation: slide 3s;
   flex-direction: column;
   justify-content: space-between;
+  margin:auto;
 }
 .content--answer {
   display: flex;
   flex-direction: column;
+  margin: auto;
 }
 .content--answer__btn {
   all: unset;
@@ -73,15 +69,17 @@
   background-color: var(--button--bordercolor);
   color: black;
 }
-/* .start {
-  transform: scale(0);
-}
-.end {
-  transform: scale(1);
-  transition: all 0.5s;
-} */
+
 
 /*여기부터*/
+.프로그래스바> span{
+  font-size:12px
+}
+
+.프로그래스바> span:hover{
+  color:blueviolet;
+  font-size: 15px;
+}
 
 .프로그래스바--꺽쇠{
   font-weight: 600;

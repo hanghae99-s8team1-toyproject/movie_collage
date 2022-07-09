@@ -26,15 +26,14 @@ function Result() {
         <header className="result--header">모두의 영화</header>
         <section className="result--movie">
           <div className="result--movie--text">
-            <h1>오늘 당신만을 위한 영화는 </h1>
+            <h1>오늘 당신만을 위한 영화는... </h1>
             <span className="result--movie--text--keywords">
               &lt; {data.title}
-              &gt;입니다
-              <br /> 키워드{" "}
-              <span className="result--movie--text--keyword">
+              {" "}&gt;{" "}입니다 </span>
+              <p className="result--movie--text--keyword1">키워드{" "}<span className="result--movie--text--keyword2">
                 {data.keyword}
-              </span>
-            </span>
+            </span></p>
+              
             <div className="result--movie--info"></div>
           </div>
           <div className="result--movie--img">
