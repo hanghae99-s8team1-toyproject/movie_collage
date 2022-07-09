@@ -15,7 +15,7 @@ function Detail(props){
   }, []);
 
   let movieInfo = {};
-
+// props.seq
   if (JSON.stringify(movieData) !== '{}') {
     movieData.forEach(pram => {
       if (pram.movieUrl_seq === props.seq) {
@@ -48,8 +48,8 @@ function Detail(props){
               <div><span>감독</span> {movieInfo.director}</div>
               <div><span>출연</span> {movieInfo.actor}</div>
               <div><span>키워드</span> {movieInfo.keyword}</div>
-              <Desc title="시놉시스" context={movieInfo.synopsis ? movieInfo.synopsis : ""} />
-              <Desc title="연출 의도" context={movieInfo.direct_intent ? movieInfo.direct_intent : ""} />
+              <Desc title="시놉시스" context={(movieInfo.synopsis).length > 200 ? (movieInfo.synopsis).substr(0, 199) + "..." : movieInfo.synopsis} />
+              <Desc title="연출 의도" context={(movieInfo.direct_intent).length > 300 ? (movieInfo.direct_intent).substr(0, 300) + "..." : movieInfo.direct_intent} />
             </div>
             <button onClick={props.close}>창 닫기</button>
           </div>

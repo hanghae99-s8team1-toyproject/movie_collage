@@ -58,6 +58,7 @@
   border-style: none;
   width: 40%;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .result--movie--img > img {

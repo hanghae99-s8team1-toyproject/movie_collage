@@ -64,6 +64,7 @@
 
 .content--answer button {
   font-size: 15px;
+  cursor: pointer;
 }
 
 .content--answer__btn {
