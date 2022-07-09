@@ -1,5 +1,5 @@
+
 .resultpage {
-  font-family: "Nanum Gothic", sans-serif;
   text-align: center;
   max-width: 1536px;
   height: 864px;
@@ -33,21 +33,10 @@
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
-
-.result--movie--text > h1 {
-  font-size: 3rem;
-}
-.result--movie--text > p {
-  font-size: 2rem;
+.result--movie--text>h1 {
+  font-size: 30px;
 }
 
-.result--movie--text > span {
-  font-size: 2rem;
-}
-
-.result--movie--text > li {
-  font-size: 1rem;
-}
 
 .result--movie--img {
   position: relative;
@@ -65,6 +54,7 @@
   background-color: var(--button--bgcolor);
   border-style: none;
   width: 40%;
+  font-size: 12px;
 }
 
 .result--movie--img > img {
@@ -79,11 +69,18 @@
 .result--movie--info {
   margin-top: 10px;
 }
-
-.result--movie--text--keyword {
+.result--movie--text--keywords{
+  font-size: 24px;
+  font-family: var(--font--family4);
+}
+.result--movie--text--keyword1{
+color:grey
+}
+.result--movie--text--keyword2 {
   background-color: var(--font--color);
   opacity: 0.2;
   border-radius: 30px;
   padding: 5px;
   color: black;
+  font-size: 12px;
 }

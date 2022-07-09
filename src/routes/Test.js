@@ -56,7 +56,7 @@ function Test() {
 
   return (
     <div className="App">
-      <header className="header">모두의 영화</header>
+      <header className="header"><img className="header--img" src="logo_movies.png" alt="logo" /></header>
       {스위치 ? (
         <Loading />
       ) : (

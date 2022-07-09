@@ -1,17 +1,18 @@
-  /* background */
-  /* display */
-  /* font */
-  /* border, padding, margin */
-  /* height, width */
-  /* etc */
+/* background */
+/* display */
+/* font */
+/* border, padding, margin */
+/* height, width */
+/* etc */
 
-  /* 영화 상세 정보 설명 팝업창 */
+/* 영화 상세 정보 설명 팝업창 */
+
 .container--detail {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
 
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
   display: flex;
   flex-direction: column;
@@ -21,8 +22,9 @@
 
   z-index: 3;
 
-  min-width:100vw;
-  min-height:100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-size: 12px;
 }
 
 .detail--background {
@@ -30,28 +32,25 @@
 
   display: grid;
   grid-template-columns: 1fr 1.8fr;
-  gap:1rem;
+  gap: 1rem;
 
   border-radius: 1rem;
   padding: 1rem;
 
   width: 64rem;
-  height:36rem;
+  height: 36rem;
 
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
-
-
 
 /* 영화 포스터 출력 칸 */
 
 .detail--background__L {
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
   font-size: 3rem;
 
   margin: 1rem auto auto 1rem;
   border: none;
-
 }
 
 .detail--background__L img {
@@ -60,55 +59,51 @@
   border-radius: 3px;
 }
 
-
-
 /* 영화 상세 정보 칸 */
 
 .detail--background__R {
-
   display: flex;
   flex-direction: column;
 
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
   font-size: 3rem;
-  
+
   border: none;
   margin: 1rem auto auto 1rem;
 
-  height:32rem;
+  height: 32rem;
   width: 37rem;
 }
-
 
 .detail--background__R > h1 {
   font-size: 2.5rem;
   text-align: left;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
-  margin:0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .detail--background__R > h2 {
   font-size: 1.5rem;
   text-align: left;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
-  margin:0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .detail--background__R ul {
   padding: 0;
-  margin:0.5rem 0;
+  margin: 0.5rem 0;
   list-style: none;
 }
 
 .detail--background__R li {
   font-weight: bold;
   text-align: left;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
   padding-right: 1rem;
-  margin:0;
+  margin: 0;
 
   float: left;
 }
@@ -116,16 +111,16 @@
 .detail--background__R span {
   font-weight: bold;
   text-align: left;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
-  margin:0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .detail--background__R > div > div {
   text-align: left;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
-  margin:0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .detail--background__R dl {
@@ -136,40 +131,39 @@
   font-size: 1.2rem;
   font-weight: bold;
   text-align: left;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
   margin: 1rem 0;
 }
 
 .detail--background__R dd {
   text-align: left;
-  color: rgb(0,0,0);
+  color: rgb(0, 0, 0);
 
-  margin:0.5rem 0;
-  margin-right:0.5rem;
+  margin: 0.5rem 0;
+  margin-right: 0.5rem;
 }
 
-
 .detail--background__R button {
-  background-color: rgb(144,80,157);
+  background-color: rgb(144, 80, 157);
 
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   font-size: 1.2rem;
 
-  border: 1px solid rgb(173,132,178);
+  border: 1px solid rgb(173, 132, 178);
   border-radius: 3px;
 
   padding: 0.3rem 1rem;
-  
-  margin-top:auto;
-  margin-left:auto;
+
+  margin-top: auto;
+  margin-left: auto;
   transition: ease 0.2s;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .detail--background__R button:hover {
-  background-color: rgb(173,132,178);
-  
+  background-color: rgb(173, 132, 178);
+
   transform: scale(1.05) perspective(1px);
   transition: ease 0.2s;
 }
@@ -181,10 +175,9 @@
   align-items: center;
 
   margin: auto;
-  
-  transform: translateX(15vw)
-}
 
+  transform: translateX(15vw);
+}
 
 .detail--loading__loader {
   width: 50px;
@@ -202,7 +195,7 @@
 }
 .detail--loading__loader:before,
 .detail--loading__loader:after {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   border-radius: 50%;
   position: absolute;
@@ -210,18 +203,25 @@
   left: 0;
 }
 
-
 .loader__anim:before,
 .loader__anim:after {
-  content: '';
+  content: "";
   background-color: #333;
   transform: scale(0);
   animation: loaderAnim 1.5s infinite ease-in-out;
 }
-.loader__anim:after { animation-delay: 0.75s; }
+.loader__anim:after {
+  animation-delay: 0.75s;
+}
 
-  @keyframes loaderAnim {
-      0%   { transform: translateX(-100%) scale(0); }
-      50%  { transform: translateX(0%)    scale(1); }
-      100% { transform: translateX(100%)  scale(0); }
+@keyframes loaderAnim {
+  0% {
+    transform: translateX(-100%) scale(0);
   }
+  50% {
+    transform: translateX(0%) scale(1);
+  }
+  100% {
+    transform: translateX(100%) scale(0);
+  }
+}
