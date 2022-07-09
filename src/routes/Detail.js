@@ -48,8 +48,8 @@ function Detail(props){
               <div><span>감독</span> {movieInfo.director}</div>
               <div><span>출연</span> {movieInfo.actor}</div>
               <div><span>키워드</span> {movieInfo.keyword}</div>
-              <Desc title="시놉시스" context={movieInfo.synopsis ? (movieInfo.synopsis).substr(0, 100) : ""} />
-              <Desc title="줄거리" context={movieInfo.direct_intent ? (movieInfo.direct_intent).substr(0, 300) : ""} />
+              <Desc title="시놉시스" context={movieInfo.synopsis ? movieInfo.synopsis : ""} />
+              <Desc title="줄거리" context={movieInfo.direct_intent ? movieInfo.direct_intent : ""} />
             </div>
             <button onClick={props.close}>창 닫기</button>
           </div>

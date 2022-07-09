@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
+import logo_image from './logo_movies.png';
 import './Home.css';
-import Detail from "./Detail";
-
 
 const stillCuts = [
   `url(https://indieground.kr/movieImgFolder/2fb06bbc-a20e-49e6-8f6f-e99077eba6a1_png)`,
@@ -40,9 +39,7 @@ function Home(){
     <>
     {loadingState ? <div className="Loading">Loading...</div> : 
       <div className="container">
-        <div className="container--menu">
-          <img src="logo_movies.png" alt="logo" />
-        </div>
+        <img src={logo_image} alt="logo" />
         <div className="container--body">
           <div className="container--body--Slideshow">
             <div className="Slideshow__Slideshowshadow"></div>
@@ -63,22 +60,6 @@ function Home(){
     </>
     );
 }
-
-
-// 추후에 옮길 코드
-
-// {popupState ? <Detail close={closeToPopup}></Detail> : null}
-// import Detail from "./Detail";
-
-// const [popupState, setPopupState] = useState(false);
-
-// function openToPopup(){
-//   setPopupState(true);
-// }
-
-  // function closeToPopup(){
-//   setPopupState(false);
-// }
 
 
 export default Home;
