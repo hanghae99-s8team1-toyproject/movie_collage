@@ -13,6 +13,9 @@
   align-items: center;
   justify-content: center;
 }
+.header--img {
+  cursor: pointer;
+}
 
 .result--movie {
   width: 100%;

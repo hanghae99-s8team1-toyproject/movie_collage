@@ -42,7 +42,7 @@ function Result() {
             <div className="result--movie--info"></div>
           </div>
           <div className="result--movie--img">
-            <img src={data.thumbnail} className="result--movie--img--poster" />
+            <img src={data.thumbnail} className="result--movie--img--poster" alt="movie poster" />
             <button onClick={openToPopup} close="closeToPopup">
               상세보기
             </button>
@@ -53,6 +53,4 @@ function Result() {
   );
 }
 
-{
-}
 export default Result;
