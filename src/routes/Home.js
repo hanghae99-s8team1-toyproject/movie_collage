@@ -41,7 +41,6 @@ function Home(){
     {loadingState ? <div className="Loading">Loading...</div> : 
       <div className="container">
         <div className="container--menu">
-          <img src="logo_movies.png" alt="logo" />
         </div>
         <div className="container--body">
           <div className="container--body--Slideshow">
